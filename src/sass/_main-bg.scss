@@ -1,0 +1,14 @@
+.main-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;     // ⬅️ background layer
+  pointer-events: none;
+}
+
+section,
+.hero,
+nav,
+footer {
+  position: relative;
+  z-index: 2;     // ⬅️ content layer
+}

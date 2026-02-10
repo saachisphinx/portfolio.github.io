@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sachi Gawai | Software Engineer</title>
+  <link rel="icon" href="fav.png" />
+</head>
+
+<body>
+  <!-- HERO -->
+  <div class="hero" id="hero">
+    <div class="canvas">
+      <canvas class="connecting-dots"></canvas>
+    </div>
+
+    <div class="heading">
+      <div class="heading__line-1">
+        Hello, I'm <span>Sachi</span>.
+      </div>
+      <div class="heading__line-2">
+        I'm a <span class="role-rotator">
+          <span class="role-rotator__text">Software Engineer</span>
+        </span>.
+      </div>
+
+      <a href="#about" class="heading__link">
+        <div class="heading-cta">
+          View my work
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navigation-bar">
+    <ul class="navigation">
+      <li class="navigation__item navigation__item--active" id="nav-hero"><a href="#hero">Home</a></li>
+      <li class="navigation__item" id="nav-about"><a href="#about">About</a></li>
+      <li class="navigation__item" id="nav-experience"><a href="#experience">Experience</a></li>
+      <li class="navigation__item" id="nav-projects"><a href="#projects">Projects</a></li>
+      <li class="navigation__item" id="nav-contact"><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- BACKGROUND CANVAS -->
+  <div class="main-bg">
+    <div class="canvas">
+      <canvas class="canvas-2"></canvas>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2 class="about__heading section-heading">About</h2>
+
+    <div class="about__content">
+      <div class="profile">
+        <div class="profile__picture">
+          <img class="profile__img" alt="Sachi Gawai" />
+        </div>
+
+        <p class="profile__blurb">
+          Software Engineer focused on SQL Server performance, ETL pipelines, and backend reliability.
+          I’ve reduced API latency by 45% across 10M+ monthly calls through targeted T-SQL and index tuning
+          and improved analytics throughput by 60% with production ETL workflows.
+          <a href="resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </p>
+      </div>
+
+      <!-- SKILLS (UNCHANGED STRUCTURE) -->
+      <div class="skills">
+        <!-- your existing skills markup stays as-is -->
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience" id="experience">
+    <h2 class="experience__heading section-heading">Experience</h2>
+
+    <div class="timeline">
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card">
+          <div class="timeline__top">
+            <div>
+              <div class="timeline__role">Software Engineer</div>
+              <div class="timeline__company">TipTop Technologies</div>
+            </div>
+            <div class="timeline__dates">Jun 2025 – Present</div>
+          </div>
+          <ul class="timeline__bullets">
+            <li>Built and scaled News360 “Topic Insights” using Apache Solr, surfacing ranked entities with YoY deltas.</li>
+            <li>Improved SQL Server + API performance by 45% via query refactoring, indexing, and execution plan tuning.</li>
+            <li>Improved pipeline freshness and reliability by 60% using Python ETL, Docker, GitHub Actions, and AWS monitoring.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__dot"></div>
+        <div class="timeline__card">
+          <div class="timeline__top">
+            <div>
+              <div class="timeline__role">Software Engineer Intern</div>
+              <div class="timeline__company">iConsult Collaborative (Syracuse University)</div>
+            </div>
+            <div class="timeline__dates">Jun 2024 – Feb 2025</div>
+          </div>
+          <ul class="timeline__bullets">
+            <li>Modernized pipelines processing 2M+ records by migrating workloads to Azure Functions.</li>
+            <li>Reduced redundant backend executions by 80% through optimized T-SQL and Node.js services.</li>
+            <li>Delivered secure REST APIs with clear data-flow documentation for analytics consumers.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <h2 class="projects__heading section-heading">Projects</h2>
+    <!-- keep your existing projects markup -->
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="contact__heading section-heading">Contact</h2>
+
+    <form class="contact__form" method="POST">
+      <input class="contact__form-name" placeholder="Name" />
+      <input class="contact__form-email" placeholder="Email" />
+      <textarea class="contact__form-message" placeholder="Message"></textarea>
+      <button type="button" class="contact__form-submit">Submit</button>
+    </form>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>

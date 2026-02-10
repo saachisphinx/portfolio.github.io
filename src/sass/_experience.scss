@@ -1,0 +1,370 @@
+.experience {
+  padding: 10rem 0;
+}
+
+.section-heading--experience {
+  &::after {
+    content: '';
+    display: block;
+    width: 12rem;
+    height: 4px;
+    background-color: $color-red;
+    margin-top: 1rem;
+    margin-left: 0;
+
+    @media (max-width: 770px) {
+      width: 10rem;
+      height: 3px;
+    }
+  }
+}
+
+.experience__content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.experience__carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.experience__arrow {
+  background: none;
+  border: none;
+  color: $color-red;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    padding: 0.5rem;
+  }
+}
+
+.experience__slides-container {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 1.2rem;
+}
+
+.experience__slides {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience__card {
+  flex: 0 0 100%;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 2px solid rgba(255, 77, 90, 0.5);
+  border-radius: 1.2rem;
+  padding: 4rem;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience__card--active {
+  opacity: 1;
+}
+
+.experience__header {
+  margin-bottom: 1.2rem;
+}
+
+.experience__role {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+.experience__company {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: $color-red;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.experience__meta {
+  font-size: 1.6rem;
+  opacity: 0.75;
+  margin-bottom: 2rem;
+  margin-top: 0.8rem;
+  color: rgba($color-text, 0.85);
+}
+
+.experience__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin-bottom: 1.3rem;
+    opacity: 0.9;
+    padding-left: 1.8rem;
+    position: relative;
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: $color-red;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.experience__dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.experience__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 77, 90, 0.6);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  padding: 0;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &--active {
+    background: $color-red;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .experience__carousel {
+    gap: 1rem;
+  }
+
+  .experience__card {
+    padding: 3rem;
+    min-height: auto;
+  }
+
+  .experience__role {
+    font-size: 1.8rem;
+  }
+
+  .experience__company {
+    font-size: 1.5rem;
+  }
+
+  .experience__meta {
+    font-size: 1.3rem;
+  }
+
+  .experience__bullets li {
+    font-size: 1.4rem;
+  }
+}
+
+/* STACKED EXPERIENCE SECTION */
+.experience-stacked {
+  padding: 10rem 0;
+}
+
+.experience-stacked__content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-stacked__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.experience-stacked__card {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 2px solid rgba(255, 77, 90, 0.5);
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.experience-stacked__body {
+  flex: 0 0 75%;
+}
+
+.experience-stacked__logo-container {
+  flex: 0 0 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-width: 120px;
+  min-height: 120px;
+}
+
+.experience-stacked__logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.1));
+}
+
+.experience-stacked__header {
+  margin-bottom: 1rem;
+}
+
+.experience-stacked__role {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: #fff;
+}
+
+.experience-stacked__company {
+  display: inline-block;
+  font-size: 1.8rem;
+  color: $color-red;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.experience-stacked__meta {
+  font-size: 1.6rem;
+  opacity: 0.75;
+  margin-bottom: 1.5rem;
+  margin-top: 0.2rem;
+  color: rgba($color-text, 0.85);
+}
+
+.experience-stacked__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    opacity: 0.9;
+    padding-left: 1.8rem;
+    position: relative;
+
+    &::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: $color-red;
+      font-weight: bold;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-stacked__grid {
+    gap: 2rem;
+  }
+
+  .experience-stacked__card {
+    padding: 2rem;
+    flex-direction: column;
+  }
+
+  .experience-stacked__body {
+    flex: 1 1 auto;
+  }
+
+  .experience-stacked__logo-container {
+    justify-content: center;
+    margin-top: 1rem;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 1.2rem;
+  }
+
+  .experience-stacked__logo {
+    width: 80px;
+    height: 80px;
+    opacity: 0.85;
+  }
+
+  .experience-stacked__role {
+    font-size: 1.8rem;
+  }
+
+  .experience-stacked__company {
+    font-size: 1.5rem;
+  }
+
+  .experience-stacked__meta {
+    font-size: 1.3rem;
+  }
+
+  .experience-stacked__bullets li {
+    font-size: 1.4rem;
+  }
+}

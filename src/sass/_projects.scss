@@ -38,12 +38,15 @@
 .project {
   position: relative;
   display: flex;
+  gap: 4rem;
   margin-bottom: 14rem;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
 
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
     margin-left: 0;
     margin-right: 0;
   }
@@ -57,44 +60,63 @@
   }
 
   &__image {
+    flex-shrink: 0;
+    
     &-container {
       position: relative;
-      height: 70rem;
-      width: 100rem;
+      max-width: 40rem;
+      max-height: 25rem;
+      height: 25rem;
+      width: 40rem;
 
       // border: 1px solid red;
       background-color: $color-blue-dark;
       transition: all 0.2s;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       @media (max-width: 1100px) {
-        height: 64rem;
-        width: 90rem;
+        max-width: 36rem;
+        max-height: 23rem;
+        height: 23rem;
+        width: 36rem;
       }
 
       @media (max-width: 970px) {
-        height: 58rem;
-        width: 80rem;
+        max-width: 32rem;
+        max-height: 20rem;
+        height: 20rem;
+        width: 32rem;
       }
 
       @media (max-width: 900px) {
-        height: 54rem;
-        width: 75rem;
+        max-width: 35rem;
+        max-height: 22rem;
+        height: 22rem;
+        width: 35rem;
       }
 
       @media (max-width: 700px) {
-        height: 48rem;
-        width: 64rem;
+        max-width: 30rem;
+        max-height: 20rem;
+        height: 20rem;
+        width: 30rem;
       }
 
       @media (max-width: 560px) {
-        height: 40rem;
-        width: 52rem;
+        max-width: 100%;
+        max-height: 18rem;
+        height: 18rem;
+        width: 100%;
       }
 
       @media (max-width: 440px) {
-        height: 30rem;
-        width: 39rem;
+        max-width: 100%;
+        max-height: 15rem;
+        height: 15rem;
+        width: 100%;
       }
 
       &:hover {
@@ -103,30 +125,35 @@
     }
 
     &-image {
-      width: 85%;
+      width: 100%;
+      height: 100%;
       position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       & img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
   }
 
   &__info {
     position: relative;
-    top: 8rem;
-
     height: fit-content;
-    padding: 1rem;
+    padding: 0;
+    flex-grow: 1;
+    max-width: 55rem;
 
-    z-index: 9999999;
+    z-index: 10;
 
     @media (max-width: 1000px) {
-      width: fit-content;
+      width: 100%;
     }
 
     @media (max-width: 900px) {
-      top: 2rem;
       left: 0;
       right: auto;
       margin-left: 0;
@@ -135,19 +162,19 @@
     }
 
     @media (max-width: 700px) {
-      background-color: rgba($color-background, 0.5);
+      background-color: transparent;
     }
 
     @media (max-width: 560px) {
-      top: 2rem;
+      max-width: 100%;
     }
 
     @media (max-width: 440px) {
-      top: 1rem;
+      max-width: 100%;
     }
 
     @media (max-width: 400px) {
-      top: 0;
+      max-width: 100%;
     }
   }
 
@@ -368,88 +395,18 @@
   }
 
   &-left {
-    align-self: flex-start;
-    margin-left: 22rem;
-
-    @media (max-width: 1700px) {
-      margin-left: 11rem;
-    }
-
-    @media (max-width: 1500px) {
-      margin-left: 0;
-    }
+    flex-direction: row;
 
     @media (max-width: 900px) {
-      align-self: center;
-      margin-left: 0;
-    }
-
-    & .project__info {
-      left: -8rem;
-      margin-right: -2rem;
-
-      @media (max-width: 900px) {
-        left: 0;
-        margin-right: 0;
-      }
-
-      @media (max-width: 800px) {
-        margin-right: -4rem;
-      }
-
-      @media (max-width: 770px) {
-        margin-right: -4rem;
-      }
-
-      @media (max-width: 600px) {
-        margin-right: -6rem;
-      }
-
-      @media (max-width: 440px) {
-        left: -10rem;
-        margin-right: -7rem;
-      }
+      flex-direction: column;
     }
   }
 
   &-right {
-    align-self: flex-end;
-    margin-right: 22rem;
-
-    @media (max-width: 1700px) {
-      margin-right: 11rem;
-    }
-
-    @media (max-width: 1500px) {
-      margin-right: 0;
-    }
+    flex-direction: row-reverse;
 
     @media (max-width: 900px) {
-      align-self: center;
-      margin-right: 0;
-    }
-
-    & .project__info {
-      right: -8rem;
-      margin-left: -2rem;
-
-      @media (max-width: 900px) {
-        right: auto;
-        margin-left: 0;
-      }
-
-      @media (max-width: 770px) {
-        margin-left: -4rem;
-      }
-
-      @media (max-width: 600px) {
-        margin-left: -6rem;
-      }
-
-      @media (max-width: 440px) {
-        right: -10rem;
-        margin-left: -7rem;
-      }
+      flex-direction: column;
     }
   }
 }

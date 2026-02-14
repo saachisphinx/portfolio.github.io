@@ -10,6 +10,7 @@ module.exports = merge(common, {
   output: {
     filename: 'main.[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/portfolio.github.io/',
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -31,9 +32,9 @@ module.exports = merge(common, {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '',
-            },
+              options: {
+                publicPath: '/portfolio.github.io/',
+              },
           },
           'css-loader',
           {

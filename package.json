@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js --mode production && powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path dist\\imgs | Out-Null; Copy-Item -Force -Recurse src\\assets\\* dist\\imgs\\\""
+    "build": "webpack --config webpack.prod.js --mode production"
 
 
   },
@@ -46,7 +46,8 @@
     "webpack": "^5.21.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^4.15.0",
-    "webpack-merge": "^5.7.3"
+    "webpack-merge": "^5.7.3",
+    "copy-webpack-plugin": "^11.0.0"
   },
   "dependencies": {
     "clean-webpack-plugin": "^3.0.0"

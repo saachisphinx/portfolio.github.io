@@ -1,6 +1,7 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common');
 
@@ -16,6 +17,11 @@ module.exports = merge(common, {
     }),
     new CleanWebpackPlugin({
       cleanAfterEveryBuildPatterns: ['dist'],
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, 'src/assets'), to: 'imgs' },
+      ],
     }),
   ],
   module: {

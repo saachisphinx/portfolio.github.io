@@ -5,9 +5,17 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 4rem 0;
 }
 
 .section-heading--projects {
+  position: relative;
+  z-index: 5;
+  background-color: $color-background;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 4rem;
+
   &::after {
     content: '';
     display: block;
@@ -15,7 +23,8 @@
     height: 4px;
     background-color: $color-red;
     margin-top: 1rem;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
 
     @media (max-width: 770px) {
       width: 10rem;
@@ -31,78 +40,79 @@
   flex-direction: column;
   align-items: center;
   padding: 0 2rem;
+  gap: 8rem;
 }
 
 // single project
 
 .project {
-  position: relative;
+  position: static;
   display: flex;
   gap: 4rem;
-  margin-bottom: 14rem;
+  width: 100%;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+
+  @media (max-width: 1100px) {
+    gap: 3rem;
+  }
 
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin-bottom: 2rem;
   }
 
   @media (max-width: 560px) {
-    margin-bottom: 12rem;
-  }
-
-  @media (max-width: 440px) {
-    margin-bottom: 10rem;
+    gap: 1.5rem;
   }
 
   &__image {
     flex-shrink: 0;
+    flex-basis: auto;
     
     &-container {
-      position: relative;
-      max-width: 40rem;
+      position: static;
+      max-width: 35rem;
       max-height: 25rem;
       height: 25rem;
-      width: 40rem;
+      width: 35rem;
 
-      // border: 1px solid red;
       background-color: $color-blue-dark;
-      transition: all 0.2s;
+      transition: transform 0.2s ease;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
+      overflow: hidden;
 
       @media (max-width: 1100px) {
-        max-width: 36rem;
+        max-width: 32rem;
         max-height: 23rem;
         height: 23rem;
-        width: 36rem;
-      }
-
-      @media (max-width: 970px) {
-        max-width: 32rem;
-        max-height: 20rem;
-        height: 20rem;
         width: 32rem;
       }
 
+      @media (max-width: 970px) {
+        max-width: 28rem;
+        max-height: 20rem;
+        height: 20rem;
+        width: 28rem;
+      }
+
       @media (max-width: 900px) {
-        max-width: 35rem;
+        max-width: 32rem;
         max-height: 22rem;
         height: 22rem;
-        width: 35rem;
+        width: 32rem;
       }
 
       @media (max-width: 700px) {
-        max-width: 30rem;
+        max-width: 28rem;
         max-height: 20rem;
         height: 20rem;
-        width: 30rem;
+        width: 28rem;
       }
 
       @media (max-width: 560px) {
@@ -127,7 +137,7 @@
     &-image {
       width: 100%;
       height: 100%;
-      position: relative;
+      position: static;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -136,28 +146,28 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
+        display: block;
       }
     }
   }
 
   &__info {
-    position: relative;
+    position: static;
     height: fit-content;
     padding: 0;
-    flex-grow: 1;
+    flex: 1;
+    min-width: 0;
     max-width: 55rem;
 
     z-index: 10;
 
     @media (max-width: 1000px) {
       width: 100%;
+      max-width: 100%;
     }
 
     @media (max-width: 900px) {
-      left: 0;
-      right: auto;
-      margin-left: 0;
-      margin-right: 0;
+      text-align: center;
       max-width: 100%;
     }
 
@@ -179,9 +189,9 @@
   }
 
   &__title {
-    position: relative;
-    z-index: 66;
+    position: static;
     font-size: 3.5rem;
+    margin: 0;
 
     @media (max-width: 900px) {
       font-size: 3rem;
@@ -205,8 +215,7 @@
     font-size: 1.6rem;
     font-weight: 500;
     color: rgba($color-text, 0.85);
-    position: relative;
-    z-index: 66;
+    position: static;
 
     @media (max-width: 560px) {
       font-size: 1.4rem;
@@ -215,17 +224,15 @@
   }
 
   &__description {
-    position: relative;
-    margin-top: 3rem;
+    position: static;
+    margin-top: 1.5rem;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.5;
-    max-width: 52rem;
-
-    z-index: 999909999;
+    max-width: none;
 
     @media (max-width: 560px) {
-      margin-top: 2rem;
+      margin-top: 1rem;
       font-size: 1.6rem;
     }
   }
@@ -234,9 +241,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
-    margin-top: 2rem;
-    position: relative;
-    z-index: 66;
+    margin-top: 1.5rem;
+    position: static;
+    justify-content: flex-start;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+    }
   }
 
   &__tag {
@@ -260,12 +271,11 @@
   &__image-placeholder {
     width: 100%;
     height: 100%;
-    min-height: 28rem;
     background: linear-gradient(135deg, $color-background-light 0%, darken($color-background-light, 4%) 100%);
     border: 1px solid rgba($color-text, 0.08);
   }
 
-  // new button styling that works on higher dpi screen
+  // button styling
   &__live-2 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -281,12 +291,12 @@
     padding: 1rem 1.2rem;
 
     position: relative;
-    margin-top: 3rem;
+    margin-top: 2rem;
 
     cursor: pointer;
 
     @media (max-width: 560px) {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
 
     &:after {
@@ -298,12 +308,9 @@
       width: 100%;
       bottom: 1px;
       display: block;
-      // margin: 0 auto;
 
       transform-origin: bottom;
       transition: all 0.25s;
-
-      // left: -8rem;
 
       z-index: -1;
     }
@@ -320,7 +327,7 @@
   &__live,
   &__code {
     position: relative;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: 0.6rem 1rem;
     width: fit-content;
 
@@ -328,14 +335,13 @@
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 3px;
-    // border-bottom: 2px solid $color-red;
     z-index: 9;
 
     transition: all 0.2s;
     cursor: pointer;
 
     @media (max-width: 560px) {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
 
     &:hover {
@@ -349,17 +355,12 @@
       border-bottom: 2px solid $color-red;
 
       width: calc(100% + 2rem);
-      // height: 100%;
       left: -10%;
       top: 0.5rem;
       display: block;
-      margin: 0 auto;
-      position: relative;
 
       transform-origin: bottom;
       transition: all 0.2s;
-
-      // left: -8rem;
 
       z-index: -1;
     }
@@ -379,18 +380,12 @@
         transform: scaleY(12.5);
       }
     }
-
-    @media (max-width: 550px) {
-      // font-size: 2.5rem;
-      // background-color: rgba($color-background, 0.6);
-    }
   }
 
   &__code {
     &:after {
       width: calc(100% + 2rem);
       left: -8%;
-      // transform: translateX(3px);
     }
   }
 
@@ -413,23 +408,22 @@
 
 .retro {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
   & img {
-    margin-bottom: -3px;
+    margin: 0;
   }
 }
 
 .todo {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  // z-index: 0;
+  justify-content: center;
 }
 
 .weather {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 }

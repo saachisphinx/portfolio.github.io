@@ -7,6 +7,11 @@ import profileImg from './assets/imgs/newpic.png';
 
 /* PROJECTS */
 import patient2goImg from './assets/imgs/patient2go.png';
+import visenImg from './assets/imgs/Visen.png';
+import healcontrolImg from './assets/imgs/Healcontrol.png';
+import fraudImg from './assets/imgs/project-fakejob.png';
+import sentimentImg from './assets/imgs/sentiment.png';
+
 
 /* SKILLS */
 import sqlImg from './assets/imgs/sql.png';
@@ -31,6 +36,17 @@ window.addEventListener('DOMContentLoaded', () => {
 
   const patient2go = document.querySelector('.project__img--patient2go');
   if (patient2go) patient2go.src = patient2goImg;
+  const visen = document.querySelector('.project__img--visen');
+  if (visen) visen.src = visenImg;
+
+  const healcontrol = document.querySelector('.project__img--healcontrol');
+  if (healcontrol) healcontrol.src = healcontrolImg;
+
+  const fraud = document.querySelector('.project__img--fraud');
+  if (fraud) fraud.src = fraudImg;
+
+  const sentiment = document.querySelector('.project__img--sentiment');
+  if (sentiment) sentiment.src = sentimentImg;
 
   setSkill('.skills__item--sql', sqlImg);
   setSkill('.skills__item--python', pythonImg);

@@ -7,8 +7,8 @@ import profileImg from './assets/imgs/newpic.png';
 
 /* PROJECTS */
 import patient2goImg from './assets/imgs/patient2go.png';
-import visenImg from './assets/imgs/Visen.png';
-import healcontrolImg from './assets/imgs/Healcontrol.png';
+import visenImg from './assets/imgs/visen.png';
+import healcontrolImg from './assets/imgs/healcontrol.png';
 import fraudImg from './assets/imgs/project-fakejob.png';
 import sentimentImg from './assets/imgs/sentiment.png';
 

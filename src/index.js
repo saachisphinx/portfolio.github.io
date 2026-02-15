@@ -9,7 +9,7 @@ import profileImg from './assets/imgs/newpic.png';
 import patient2goImg from './assets/imgs/patient2go.png';
 import visenImg from './assets/imgs/visen.png';
 import healcontrolImg from './assets/imgs/healcontrol.png';
-import fraudImg from './assets/imgs/project-fakejob.png';
+import fraudImg from './assets/imgs/pipeline.png';
 import sentimentImg from './assets/imgs/sentiment.png';
 
 
@@ -26,6 +26,13 @@ import angularImg from './assets/imgs/angular.png';
 import pgImg from './assets/imgs/pg.png';
 import gitImg from './assets/imgs/git.png';
 import ghaImg from './assets/imgs/gha.png';
+import jsImg from './assets/imgs/js.png';
+import javaImg from './assets/imgs/java.png';
+import mongoImg from './assets/imgs/mongo.png';
+import expressImg from './assets/imgs/express.png';
+import restImg from './assets/imgs/restful.png';
+import gcpImg from './assets/imgs/gcp.png';
+import k8sImg from './assets/imgs/kubernetes.png';
 
 window.addEventListener('DOMContentLoaded', () => {
   canvasDotsBg();
@@ -60,6 +67,15 @@ window.addEventListener('DOMContentLoaded', () => {
   setSkill('.skills__item--pg', pgImg);
   setSkill('.skills__item--git', gitImg);
   setSkill('.skills__item--gha', ghaImg);
+
+  // New skills
+  setSkill('.skills__item--javascript', jsImg);
+  setSkill('.skills__item--java', javaImg);
+  setSkill('.skills__item--mongodb', mongoImg);
+  setSkill('.skills__item--express', expressImg);
+  setSkill('.skills__item--rest', restImg);
+  setSkill('.skills__item--gcp', gcpImg);
+  setSkill('.skills__item--k8s', k8sImg);
 
   initExperienceCarousel();
 });

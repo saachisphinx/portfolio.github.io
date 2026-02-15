@@ -62,7 +62,7 @@
 
     &-name,
     &-email {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
       padding: 1.2rem;
       height: auto;
       min-height: 4.5rem;
@@ -72,40 +72,47 @@
     &-message {
       height: 14rem;
       padding: 1.2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       font-size: 1.6rem;
     }
 
     &-submit {
       align-self: center;
       position: relative;
-      padding: 1rem 2rem;
+      padding: 0.75rem 2.5rem; /* 12px 40px */
       width: fit-content;
 
       font-size: 1.6rem;
       text-transform: uppercase;
       font-weight: 700;
-      letter-spacing: 2px;
-      color: $color-text;
-      background-color: transparent;
-      border: 2px solid $color-red;
+      letter-spacing: 1px;
+      color: #ffffff;
+      background-color: #e74c3c;
+      border: none;
+      border-radius: 5px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 
       &:hover {
-        background-color: $color-red;
-        color: $color-background;
+        background-color: #c0392b;
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
       }
 
       @media (max-width: 560px) {
-        padding: 0.8rem 1.5rem;
+        padding: 0.75rem 1.5rem;
         font-size: 1.4rem;
+        width: 100%;
+        max-width: 40rem;
       }
     }
 
     &-submit-2 {
       align-self: flex-start;
       margin-top: 0 !important;
+    }
+    @media (max-width: 560px) {
+      padding: 0 1rem;
     }
   }
 

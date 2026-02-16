@@ -1,6 +1,7 @@
 import './sass/main.scss';
 import canvasDots from './heroCanvas';
 import canvasDotsBg from './bgCanvas';
+import resumeFile from './assets/resume.pdf';
 
 /* PROFILE */
 import profileImg from './assets/imgs/newpic.png';

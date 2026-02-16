@@ -22,6 +22,7 @@ module.exports = merge(common, {
     new CopyWebpackPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'src/assets'), to: 'imgs' },
+        { from: path.resolve(__dirname, 'static/resume.pdf'), to: 'resume.pdf' },    
       ],
     }),
   ],

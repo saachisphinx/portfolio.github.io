@@ -6,6 +6,57 @@
   z-index: 999;
 }
 
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.4rem;
+
+  .heading-cta {
+    margin-top: 0;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.cta-btn--resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  font-size: 2rem;
+  font-weight: 500;
+  height: auto;
+  line-height: normal;
+  color: $color-text;
+  background-color: transparent;
+  border: 2px solid $color-red;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  animation: moveInBottom 0.7s 1.2s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.21, 1.11, 0.81, 0.99);
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    background-color: rgba($color-red, 0.15);
+    color: $color-text;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 1.8rem;
+  }
+
+  @media (max-width: 550px) {
+    padding: 0.8rem 2rem;
+  }
+}
+
 .canvas {
   position: absolute;
   top: 0;
